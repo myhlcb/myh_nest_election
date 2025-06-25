@@ -1,0 +1,26 @@
+services:
+  app:
+    build: .
+    container_name: ev-app
+    depends_on:
+      - mysql
+      - redis
+    ports:
+      - '3000:3000'
+    restart: always
+
+  mysql:
+    image: mysql:8.0
+    container_name: ev-mysql
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: q1234567
+      MYSQL_DATABASE: election
+    command: --default-authentication-plugin=mysql_native_password
+
+  redis:
+    image: redis:6.2
+    container_name: ev-redis
+    ports:
+      - '6379:6379'

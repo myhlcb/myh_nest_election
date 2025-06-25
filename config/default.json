@@ -1,0 +1,21 @@
+{
+    "dbConfig": {
+        "mysql": {
+            "type": "mysql",
+            "host": "ev-mysql",
+            "port": 3306,
+            "username": "root",
+            "password": "q1234567",
+            "database": "election",
+            "synchronize": true,
+            "autoLoadEntities": true,
+            "logging": true
+        }
+    },
+    "redisConfig": {
+        "port": 6379,
+        "host": "ev-redis",
+        "db": 0,
+        "password": ""
+    }
+}
