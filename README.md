@@ -18,7 +18,7 @@
 * 启动 npm run start:dev(你可以修改config/dev.json里面的mysql和redis为指定数据库)
 * test测试用例 npm run test:e2e(部分接口存在幂等，会验证不通过)
 * 访问swagger文档  http://localhost:3000/api/v1/docs
-* 登录admin(admin账号会自动创建)
+* 登录admin(admin账号会自动创建,ssn是000-00-0000)
 ```bash
 curl --location 'localhost:3000/api/v1/auth/login' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
